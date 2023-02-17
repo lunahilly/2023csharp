@@ -1,0 +1,10 @@
+- Room
+- PlayerSprite
+- bool
+- int
+- Bitmap
+- Graphics
+- readonly
+- string
+- float
+- class
