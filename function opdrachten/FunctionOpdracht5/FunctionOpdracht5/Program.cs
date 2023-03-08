@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace FunctionOpdracht5
 {
@@ -22,8 +23,11 @@ namespace FunctionOpdracht5
             heroName = GetHeroName(); //heroName zit op Program (this)
 
             Console.WriteLine($"your hero is called {heroName}");
+            Thread.Sleep(1000);
 
             SetHeroStrength(9999);//super sterk natuurlijk
+
+            SetHealth(1000);
 
             //1) roep hier de SetHealth aan met een 1000;
 
@@ -34,17 +38,24 @@ namespace FunctionOpdracht5
                	int dam = RollDamage();//5) maak deze function, je mag een random gebruiken of een vast getal
               
             	Console.WriteLine($"your hero takes {dam} damage");
-				DoDamageToHero(dam);//6) maak deze function, deze haalt dam af van de health (op program)
-
+                Thread.Sleep(1000);
+                DoDamageToHero(dam);//6) maak deze function, deze haalt dam af van de health (op program)
+                if (health <= 0 || health == 0 )
+                {
+                    Console.WriteLine("your hero is dead");
+                    break;
+                }
             	Console.WriteLine($"your hero has {health} health");
+                Thread.Sleep(1000);
             }
+            Thread.Sleep(1000);
 
             Console.WriteLine("oefening compleet!");
+            Thread.Sleep(1000);
         }
 
         private string GetHeroName()
         {
-            Console.WriteLine("What is your name?");
             string Name = Console.ReadLine();
             return Name;
         }
@@ -60,23 +71,21 @@ namespace FunctionOpdracht5
 
         private bool IsHeroDead()
         {
-            if (health <= 0) return true;
-            else return false;
+            if (health <= 0 || health == 0) return false;
+            else return true;
         }
 
         private int RollDamage()
         {
             Random rnd = new Random();
-            int number = rnd.Next(0, 100);
+            int number = rnd.Next(500, 1000);
             return number;
         }
 
-        private int DoDamageToHero()
+        private int DoDamageToHero(int dam)
         {
-            Health2 = health - 
-
-
-
+            health = health - dam;
+            return health;
         }
 
         //
