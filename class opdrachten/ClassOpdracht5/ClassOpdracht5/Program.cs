@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Diagnostics;
 
 namespace ClassOpdracht5
 {
@@ -9,6 +10,8 @@ namespace ClassOpdracht5
     partial class Program
     {
         private Game game;
+
+        
 
         static void Main()
         {
@@ -29,7 +32,7 @@ namespace ClassOpdracht5
                 Console.Clear();
                 game.RenderWithConsole();
                 ReadInput();
-
+                Console.WriteLine("Hello world!");
                 Thread.Sleep(100);
             }
         }

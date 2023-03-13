@@ -15,7 +15,6 @@ namespace ClassOpdracht4
             //deze werkt niet, ga naar gamerenderer en volg de opdrachten in commentaar
             GameRenderer renderer= new GameRenderer(startScreen);
 
-
             renderer.Render();
 
             string startInput = Console.ReadLine();

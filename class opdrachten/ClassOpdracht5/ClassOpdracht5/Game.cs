@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
+using System.Drawing;
+
 
 namespace ClassOpdracht5
 {
@@ -8,7 +11,9 @@ namespace ClassOpdracht5
         {
 
             //maak hier een class variable aan (access= private, type=RenderObject, name=player)
-          ???
+            private Tile player;
+            private Room room;
+
 
             internal Game()
             {
