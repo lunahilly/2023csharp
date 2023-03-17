@@ -13,7 +13,7 @@ namespace ClassOpdracht5
             this.x = x;
             this.y = y;
 
-            graphic = this.graphic;
+            this.graphic= graphic;
 			//vergeet this niet te gebruiken!
             //geef hier de waarde van x aan class variable x
            
