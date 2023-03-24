@@ -10,7 +10,6 @@ namespace ForOpdracht1
 
             //type nu hieronder for, dan druk je de TAB toets in, achter i < zet je straten.Length
 
-
             //in de for loop schrijf je nu een Console.WriteLine() met tussen de haakjes straten[i]
 
             //run het programma (groene play knop) wat gebeurt er?
